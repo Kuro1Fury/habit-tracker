@@ -11,8 +11,6 @@ def create_app():
     app = Flask(__name__)
 
     client = MongoClient(os.environ.get("MONGODB_URI"))
-    # client = MongoClient(
-    #     "mongodb+srv://Kuro1_Fury:skycoder135790@habittracker.pkjfjjn.mongodb.net/test")
     app.db = client.Habits
 
     app.register_blueprint(pages)
